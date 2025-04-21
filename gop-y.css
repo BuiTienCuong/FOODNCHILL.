@@ -384,4 +384,83 @@ nav ul ul {
     list-style: none;
     padding-left: 0;
 }
+.separator {
+    color: #999;
+    padding: 0 8px;
+    font-size: 0.9em;
+    position: relative;
+    top: -1px;
+  }
+  /* Auth buttons styles */
+.auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-buttons a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .login-btn {
+    color: #333;
+    border: 1px solid #333;
+  }
+  
+  .login-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .signup-btn {
+    background-color: #ff3366;
+    color: white;
+    border: 1px solid #ff3366;
+  }
+  
+  .signup-btn:hover {
+    background-color: #ff4d7e;
+  }
+  
+  /* User info when logged in */
+  .user-info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .welcome-msg {
+    color: #333;
+  }
+  
+  .logout-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: #ff3366;
+    border: 1px solid #ff3366;
+    transition: all 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff4d7e;
+  }
+  @media (max-width: 768px) {
+    .auth-buttons, .user-info {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .auth-buttons a, .logout-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
 
