@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tin tức ẩm thực Hà Nội - Đánh giá địa điểm ăn uống">
+    <link rel="stylesheet" href="tin-tuc.css">
+    <title>Ẩm Thực Hà Nội - Khám phá văn hóa ẩm thực Thủ đô</title>
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="trang-chu.html">FOODnCHILL</a>
+            </div>
+            <ul class="item">
+                <li><a href="trang-chu.html">Trang chủ</a></li>
+                <li class="dropdown">
+                    <a href="#">Địa điểm</a>
+                    <ul class="dropdown-content">
+                        <li><a href="dia-diem-cau-giay.html">Cầu Giấy</a></li>
+                        <li><a href="dia-diem-hoan-kiem.html">Hoàn Kiếm</a></li>
+                        <li><a href="dia-diem-hai-ba-trung.html">Hai Bà Trưng</a></li>
+                        <li><a href="dia-diem-thanh-xuan.html">Thanh Xuân</a></li>
+                    </ul>
+                </li>
+                <li><a href="tin-tuc.html">Tin tức</a></li>
+                <li><a href="gop-y.html">Góp ý</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <main class="container">
+        <div class="white-background-section">
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Tìm kiếm tin tức...">
+                    <button id="search-btn">Tìm kiếm</button>
+                </div>
+    
+                <div class="filter-container">
+                    <h2>Lọc theo quận:</h2>
+                    <div id="district-filter">
+                        <button class="district-btn active" data-district="all">Tất cả</button>
+                        <button class="district-btn" data-district="Cầu Giấy">Cầu Giấy</button>
+                        <button class="district-btn" data-district="Hoàn Kiếm">Hoàn Kiếm</button>
+                        <button class="district-btn" data-district="Hai Bà Trung">Hai Bà Trưng</button>
+                        <button class="district-btn" data-district="Thanh Xuân">Thanh Xuân</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+            <section class="news-section">
+            <div class="news-grid" id="news-container"></div>
+            <button id="load-more" class="hidden">Xem thêm</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Về chúng tôi</h3>
+                <p>Website giới thiệu ẩm thực, những nới vui chơi ở Hà Nội, giúp bạn khám phá những địa điểm ăn uống ngon tại các quận nội thành.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li>Email: nguyenduckanhrMU@gmail.com</li>
+                    <li>Điện thoại: 0353231415</li>
+                    <li>Địa chỉ: Manchester, England</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Hà Nội </p>
+        </div>
+    <script src="tin-tuc.js"></script>
+</body>
+</html>

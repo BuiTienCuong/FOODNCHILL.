@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6; background: url("https://images.unsplash.com/photo-1600454309261-3dc9b7597637?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+        
+    /* Lớp phủ mờ giúp chữ dễ đọc */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* có thể chỉnh opacity */
+    z-index: -1;
+}
+    /* Navigation */
+nav {
+    background-color: #111112;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.item {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.item li {
+    position: relative;
+}
+.item a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.item a:hover {
+    color: #ff6b6b;
+}
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    padding: 0.5rem 0;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content li {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #555;
+}
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+.dropdown-content a {
+    color: white;
+    display: block;
+    white-space: nowrap;
+}
+.dropdown > a::after {
+    content: " ▾";
+    font-size: 0.8em;
+}   
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section {
+    margin-bottom: 3rem;
+}
+h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.district-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+.district-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+.district-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.district-card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 1rem 0.5rem;
+    color: #2a5d84;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.district-card:hover h3 {
+    color: #3498db;
+}
+.district-card a {
+    text-decoration: none;
+    color: inherit;
+}
+.district-card .address {
+    font-size: 0.9rem;
+    color: #5a6a7a;
+    margin: 0 1rem;
+    padding-bottom: 0.5rem;
+}
+.district-card .address a {
+    color: #3a7ca5;
+    transition: color 0.3s ease;
+}
+.district-card .address a:hover {
+    color: #2a5d84;
+    text-decoration: none;
+}
+.district-card p {
+    padding: 0 1rem 1.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+footer {
+    background-color: #222;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+    text-align: left;
+}
+.footer-column h3 {
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-column a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-column a:hover {
+    color: #ff6b6b;
+}          
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .menu li {
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+    
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+/* nút yêu thíchthích */
+.favorite-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s;
+}
+.favorite-icon:hover {
+    transform: scale(1.2);
+}
+.favorite-icon.active {
+    color: #ff4757;
+}
+nav ul ul {
+    list-style: none;
+    padding-left: 0;
+}
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-height: 750px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+} 
+.card-wrapper.expanded {
+    max-height: 9999px;
+}
+#xem-them {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+  
