@@ -21,7 +21,7 @@ if (btnRegister) {
       let json = JSON.stringify(user);   // Chuyển obj user -> string, vì localStorage chỉ lưu đc string
       localStorage.setItem(inputUsernameRegister.value, json);
       alert("Đăng Ký Thành Công");
-      window.location.href = "login.html";   // Chuyển sang trang login
+      window.location.href = "trang-chu.html";   // Chuyển sang trang login
     }
   });
 }
@@ -45,7 +45,7 @@ if (btnLogin) {
         user.password === inputPassword.value
       ) {
         alert("Đăng Nhập Thành Công");
-        window.location.href = "test2.html";
+        window.location.href = "trang-chu.html";
       } else {
         alert("Đăng Nhập Thất Bại");
       }
